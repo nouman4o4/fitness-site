@@ -22,34 +22,36 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-4">
-              <a
-                href="#"
+              <Link
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
                 className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
               >
                 <ThumbsUp className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
                 className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
               >
                 <ThumbsUp className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="YouTube"
                 className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
               >
                 <ThumbsUp className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
-              >
-                <ThumbsUp className="h-5 w-5" />
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-bold uppercase tracking-wider mb-8 text-foreground">
               Quick Links
@@ -97,36 +99,36 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/programs#bodybuilding"
                   className="text-muted-foreground hover:text-orange transition-colors text-sm uppercase tracking-widest"
                 >
                   Bodybuilding
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/programs#weight-loss"
                   className="text-muted-foreground hover:text-orange transition-colors text-sm uppercase tracking-widest"
                 >
                   Weight Loss
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/programs#powerlifting"
                   className="text-muted-foreground hover:text-orange transition-colors text-sm uppercase tracking-widest"
                 >
                   Powerlifting
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/programs#personal-training"
                   className="text-muted-foreground hover:text-orange transition-colors text-sm uppercase tracking-widest"
                 >
                   Personal Training
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -163,22 +165,22 @@ export default function Footer() {
 
         <div className="pt-10 border-t border-border flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-muted-foreground text-xs uppercase tracking-[0.2em]">
-            © {currentYear} Alex Saqib Elite Fitness. All Rights Reserved.
+            (c) {currentYear} Alex Saqib Elite Fitness. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-8">
-            <a
-              href="#"
+            <Link
+              href="/privacy"
               className="text-muted-foreground hover:text-foreground text-xs uppercase tracking-[0.2em] transition-colors"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/terms"
               className="text-muted-foreground hover:text-foreground text-xs uppercase tracking-[0.2em] transition-colors"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>

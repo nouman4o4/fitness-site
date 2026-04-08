@@ -31,13 +31,13 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b",
+        "fixed top-0 left-0 right-0 z-50 bg-background transition-all duration-300 border-b",
         isScrolled
-          ? "bg-background/80 backdrop-blur-md border-border py-3"
-          : "bg-transparent border-transparent py-5",
+          ? "bg-background/80 backdrop-blur-xs border-border py-3"
+          : "bg-transparent border-transparent py-6",
       )}
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="w-full max-w-350 mx-auto px-4 md:px-6">
         <nav className="flex items-center justify-between">
           {/* Left: Logo */}
           <Link href="/" className="flex flex-col items-start group">
@@ -57,9 +57,7 @@ export default function Navbar() {
                   href={link.href}
                   className={cn(
                     "text-sm font-medium uppercase tracking-widest transition-colors hover:text-orange relative group",
-                    pathname === link.href
-                      ? "text-orange"
-                      : "text-foreground/70",
+                    pathname === link.href ? "text-orange" : "text-foreground",
                   )}
                 >
                   {link.name}
@@ -77,7 +75,10 @@ export default function Navbar() {
           {/* Right: CTA & Mobile Menu */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center">
-              <Button className="border-accent bg-background text-foreground rounded-sm hover:bg-orange/90 font-bold uppercase tracking-wider px-8 transition-transform hover:scale-105 active:scale-95">
+              <Button
+                className="border-accent cursor-pointer bg-background text-foreground rounded
+               hover:bg-accent font-bold uppercase tracking-wider px-8 transition-transform hover:scale-105 active:scale-95"
+              >
                 Book a session
               </Button>
             </div>
@@ -121,7 +122,7 @@ export default function Navbar() {
                               <ChevronRight
                                 className={cn(
                                   "h-5 w-5 transition-transform group-hover:translate-x-1",
-                                  location.pathname === link.href
+                                  pathname === link.href
                                     ? "text-orange"
                                     : "text-muted-foreground",
                                 )}

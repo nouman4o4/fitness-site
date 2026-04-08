@@ -39,7 +39,7 @@ export default function RootLayout({
         inter.variable,
       )}
     >
-      <body className="min-h-full max-w-350 mx-auto flex flex-col pt-20">
+      <body className="min-h-full max-w-350 mx-auto flex flex-col">
         <Navbar />
         {children}
         <Footer />
