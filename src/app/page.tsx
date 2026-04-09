@@ -1,6 +1,7 @@
 import Hero from "@/components/home-compnents/Hero"
 import StatsStrip from "@/components/home-compnents/StatsStrip"
 import AboutPreview from "@/components/home-compnents/AboutPreview"
+import Programs from "@/components/home-compnents/Programs"
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <StatsStrip />
       <AboutPreview />
+      <Programs />
     </div>
   )
 }

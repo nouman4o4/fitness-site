@@ -14,7 +14,7 @@ export default function Hero() {
         <div className="absolute top-0 bottom-0 right-0 w-1/2 z-0">
           <img
             // src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=2070"
-            src={"/images/image-1.jfif"}
+            src={"/images/hero.jfif"}
             alt="Gym Background"
             className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
