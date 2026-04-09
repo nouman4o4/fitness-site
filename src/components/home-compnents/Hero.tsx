@@ -2,7 +2,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Button } from "../ui/button"
-import { ArrowUpRight, Flame, Heart, Play, Send } from "lucide-react"
+import { ArrowUp, ArrowUpRight, Flame, Heart, Play, Send } from "lucide-react"
 import { Twitter } from "@hugeicons/core-free-icons"
 import { BsTwitter } from "react-icons/bs"
 import { FaFacebook } from "react-icons/fa"
@@ -24,9 +24,12 @@ export default function Hero() {
 
         <div className="w-full px-4 md:px-6 relative z-10">
           <div className="">
-            <div className=" space-y-8">
-              <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tight leading-tight">
-                Get Fit, <span className="text-accent">Stay Strong!</span>
+            <div className=" space-y-8 z-30 relative">
+              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-tight">
+                Sculpted With Purpose. <br />
+                <span className="text-accent md:text-5xl">
+                  Backed By Discipline!
+                </span>
               </h1>
 
               <p className="text-lg text-gray-300 max-w-lg leading-relaxed">
@@ -36,16 +39,12 @@ export default function Hero() {
               </p>
 
               <div className="flex items-center gap-6 pt-4">
-                <Button className="bg-orange hover:bg-orange/90 text-white font-bold py-6 px-8 rounded flex items-center gap-2 group hover:scale-100 active:scale-95 cursor-pointer transition-all duration-300">
+                <Button className="bg-accent hover:bg-orange/90 text-foreground text-lg font-bold py-6 px-8 rounded flex items-center gap-2 group hover:scale-105 active:scale-95 cursor-pointer transition-all duration-300">
                   Join us
-                  <div className="bg-white/20 p-1 rounded-full group-hover:rotate-45 transition-transform">
-                    <ArrowUpRight className="h-4 w-4" />
+                  <div className="bg-white/20 p-1 rounded-full rotate-45 group-hover:rotate-90 transition-transform">
+                    <ArrowUp className="h-4 w-4" />
                   </div>
                 </Button>
-
-                <button className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/10 transition-colors group">
-                  <Play className="h-5 w-5 fill-white group-hover:scale-110 transition-transform" />
-                </button>
               </div>
 
               {/* Social Proof */}
@@ -62,9 +61,9 @@ export default function Hero() {
                   ))}
                 </div>
                 <div className="space-y-1">
-                  <p className="text-xl font-bold">10k+ satisfied</p>
+                  <p className="text-xl font-bold">1100+ Online</p>
                   <p className="text-sm text-gray-400 uppercase tracking-widest">
-                    customs
+                    Transformations
                   </p>
                 </div>
               </div>
@@ -72,7 +71,6 @@ export default function Hero() {
 
             {/* Right Side - Floating Cards & Socials */}
             <div className=" absolute top-0 bottom-0 right-0 w-1/4 lg:w-1/2 h-125 hidden lg:block">
-              {/* Floating Card 1 */}
               <motion.div
                 initial={{ x: 20, y: 20, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
@@ -90,7 +88,6 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating Card 2 */}
               <motion.div
                 initial={{ x: -20, y: 20, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
