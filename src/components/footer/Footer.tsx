@@ -1,8 +1,24 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin, ThumbsUp } from "lucide-react"
+import { BsInstagram, BsTiktok } from "react-icons/bs"
+import { FaFacebook } from "react-icons/fa"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/alex_saqib",
+      icon: BsInstagram,
+    },
+    {
+      href: "https://www.tiktok.com/@saqib_alex",
+      icon: BsTiktok,
+    },
+    {
+      href: "https://web.facebook.com/alexsaqibathletic",
+      icon: FaFacebook,
+    },
+  ]
 
   return (
     <footer className="bg-secondary-bg border-t border-border pt-20 pb-10">
@@ -22,33 +38,21 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-4">
-              <Link
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-                className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
-              >
-                <ThumbsUp className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-                className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
-              >
-                <ThumbsUp className="h-5 w-5" />
-              </Link>
-              <Link
-                href="https://www.youtube.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="YouTube"
-                className="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-foreground hover:bg-orange hover:text-black transition-all duration-300"
-              >
-                <ThumbsUp className="h-5 w-5" />
-              </Link>
+              {socialLinks.map((item, index) => {
+                const Icon = item.icon
+
+                return (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="size-11 group rounded-full border border-white/10 flex items-center justify-center text-foreground bg-white/20 backdrop-blur-sm hover:bg-orange hover:border-orange transition-all duration-300"
+                  >
+                    <Icon className="size-5 " />
+                  </a>
+                )
+              })}
             </div>
           </div>
 

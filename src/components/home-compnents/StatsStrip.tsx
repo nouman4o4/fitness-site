@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import { motion } from "framer-motion"
 
 const stats = [
   {
@@ -24,9 +25,13 @@ export default function StatsStrip() {
     <section className="relative z-10 py-10 md:py-14">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.title}
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
               className="relative overflow-hidden rounded border border-accent/40 bg-white/5 backdrop-blur-sm"
             >
               <div className="absolute inset-0 rounded bg-linear-to-br from-accent/10 via-transparent to-transparent opacity-70 pointer-events-none" />
@@ -42,7 +47,7 @@ export default function StatsStrip() {
                   {stat.helper}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
