@@ -2,29 +2,41 @@
 import Image from "next/image"
 import { Flame, Target, Sparkles } from "lucide-react"
 import React from "react"
+import { motion } from "framer-motion"
 
 export default function AboutPreview() {
   return (
     <section className="relative z-10 py-14 md:py-24 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-[0.7fr_1.3fr] gap-10 items-center">
         {/* Portrait */}
-        <div className="relative">
-          <div className="relative overflow-hidden">
-            <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent" />
 
-            <Image
-              src="/images/image-1.jpg"
-              alt="Coach portrait"
-              width={600}
-              height={800}
-              className="w-full object-cover"
-              priority
-            />
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 1 * 0.1, duration: 0.5 }}
+          className="relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent" />
+
+          <Image
+            src="/images/image-1.jpg"
+            alt="Coach portrait"
+            width={600}
+            height={800}
+            className="w-full object-cover"
+            priority
+          />
+        </motion.div>
 
         {/* Copy */}
-        <div className="space-y-6 grow">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 2 * 0.1, duration: 0.5 }}
+          className="space-y-6 grow"
+        >
           <h3 className="text-3xl font-medium text-accent uppercase">
             About me
           </h3>
@@ -77,7 +89,7 @@ export default function AboutPreview() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

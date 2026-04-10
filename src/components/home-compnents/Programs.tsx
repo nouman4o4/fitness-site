@@ -39,7 +39,7 @@ export default function Programs() {
   return (
     <div>
       <section className="py-24 bg-card">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-full px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">

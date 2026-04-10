@@ -7,7 +7,7 @@ export default function Transformations() {
   return (
     <div>
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6">
+        <div className="w-full px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
@@ -32,10 +32,8 @@ export default function Transformations() {
                 result: "-25kg Fat Loss",
                 blurb:
                   "Alex's coaching changed my life. I never thought I could achieve this physique in just 6 months.",
-                before:
-                  "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&q=80&w=400",
-                after:
-                  "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=400",
+                before: "/images/transformations/before-1.jpg",
+                after: "/images/transformations/after-1.jpg",
                 duration: "24 Weeks",
               },
               {
@@ -43,10 +41,8 @@ export default function Transformations() {
                 result: "+8kg Lean Muscle",
                 blurb:
                   "The strength gains were incredible. The personalized nutrition plan made all the difference.",
-                before:
-                  "https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=400",
-                after:
-                  "https://images.unsplash.com/photo-1548691905-57c36cc8d93f?auto=format&fit=crop&q=80&w=400",
+                before: "/images/transformations/before-2.jpg",
+                after: "/images/transformations/after-2.jpg",
                 duration: "16 Weeks",
               },
               {
@@ -54,10 +50,8 @@ export default function Transformations() {
                 result: "Body Recomposition",
                 blurb:
                   "From average to athletic. The 1-on-1 support and accountability is what I was missing.",
-                before:
-                  "https://images.unsplash.com/photo-1507398941214-57f5162123bf?auto=format&fit=crop&q=80&w=400",
-                after:
-                  "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=80&w=400",
+                before: "/images/transformations/before-3.jpg",
+                after: "/images/transformations/after-3.jpg",
                 duration: "12 Weeks",
               },
             ].map((item, i) => (
