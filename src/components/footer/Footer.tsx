@@ -160,7 +160,7 @@ export default function Footer() {
               <li className="flex items-center gap-4">
                 <Mail className="h-5 w-5 text-orange shrink-0" />
                 <span className="text-muted-foreground text-sm">
-                  hello@alexsaqib.com
+                  muhd.saqib4@gmail.com
                 </span>
               </li>
             </ul>

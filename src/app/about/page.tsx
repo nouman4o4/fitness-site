@@ -2,6 +2,8 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Trophy, Users, Flame, Award, CheckCircle2 } from "lucide-react"
+import { BsFacebook, BsInstagram, BsTiktok } from "react-icons/bs"
+import Link from "next/link"
 
 export default function AboutPage() {
   return (
@@ -34,9 +36,11 @@ export default function AboutPage() {
               always dreamed of.
             </p>
             <div className="pt-4">
-              <Button className="bg-orange hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
-                Apply for Coaching
-              </Button>
+              <Link href={"/apply"}>
+                <Button className="bg-orange cursor-pointer hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
+                  Apply for Coaching
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -111,7 +115,7 @@ export default function AboutPage() {
       <section className="py-24 bg-card">
         <div className=" px-4 md:px-6">
           <div className="max-w-3xl  mb-20 space-y-4">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Elite <span className="text-orange">Credentials</span>
             </h2>
             <p className="text-muted-foreground uppercase tracking-widest text-xs font-bold">
@@ -179,24 +183,24 @@ export default function AboutPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <img
-                    src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400"
+                    src="images/about-page/phil-1.jpg"
                     className="w-full aspect-square object-cover grayscale"
                     referrerPolicy="no-referrer"
                   />
                   <img
-                    src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=400"
+                    src="images/about-page/phil-2.jpg"
                     className="w-full aspect-[3/4] object-cover grayscale"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="space-y-4 pt-8">
                   <img
-                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=400"
-                    className="w-full aspect-[3/4] object-cover grayscale"
+                    src="images/about-page/phil-3.jpg"
+                    className="w-full aspect-3/4 object-cover grayscale"
                     referrerPolicy="no-referrer"
                   />
                   <img
-                    src="https://images.unsplash.com/photo-1571019613576-2b22c76fd94e?auto=format&fit=crop&q=80&w=400"
+                    src="images/about-page/phil-4.jpg"
                     className="w-full aspect-square object-cover grayscale"
                     referrerPolicy="no-referrer"
                   />
@@ -255,6 +259,102 @@ export default function AboutPage() {
                 ))}
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* socail impact */}
+      <section className="py-24 bg-secondary-bg">
+        <div className="px-4 md:px-6">
+          <div className="mb-20 space-y-4">
+            <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
+              Social <span className="text-orange">Impact</span>
+            </h2>
+            <p className="text-muted-foreground uppercase tracking-widest text-xs font-bold">
+              Join the community and get daily motivation
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                platform: "Instagram",
+                handle: "@alex_saqib",
+                followers: "44k+",
+                accountLink: "https://www.instagram.com/alex_saqib",
+                image: "/images/about-page/insta-dp.jpg",
+                icon: BsInstagram,
+                color: "text-[#E1306C]",
+              },
+              {
+                platform: "TikTok",
+                handle: "@saqib_alex",
+                followers: "245K+",
+                accountLink: "https://www.tiktok.com/@saqib_alex",
+                image: "/images/about-page/tiktok-dp.jpeg",
+                icon: BsTiktok,
+                color: "text-white",
+              },
+              {
+                platform: "Facebook",
+                handle: "Alex Saqib fintness",
+                followers: "44k+",
+                image: "images/about-page/tiktok-dp.jpeg",
+                accountLink: "https://web.facebook.com/alexsaqibathletic",
+                icon: BsFacebook,
+                color: "text-[#1877F2]",
+              },
+            ].map((social, i) => (
+              <motion.div
+                key={i}
+                initial={{ y: 20, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="bg-card border border-border p-8 flex flex-col items-center text-center space-y-6 group hover:border-orange/50 transition-all duration-500"
+              >
+                <div className="relative">
+                  <img
+                    src={social.image}
+                    alt={social.platform}
+                    className="w-24 h-24 rounded-full object-cover border-2 border-orange/20 group-hover:border-orange transition-colors duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute -bottom-2 -right-2 bg-black border border-white/10 p-2 rounded-full">
+                    <social.icon className={`h-4 w-4 ${social.color}`} />
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <h3 className="text-xl font-black uppercase tracking-tight">
+                    {social.platform}
+                  </h3>
+                  <p className="text-orange font-bold text-sm">
+                    {social.handle}
+                  </p>
+                </div>
+
+                <div className="py-2 px-6 bg-white/5 rounded-full border border-white/10">
+                  <p className="text-2xl font-black">{social.followers}</p>
+                  <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">
+                    Followers
+                  </p>
+                </div>
+
+                <Link
+                  href={social.accountLink}
+                  target="_blank"
+                  className="w-full cursor-pointer"
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full cursor-pointer border-white/10 hover:border-orange hover:bg-orange hover:text-black uppercase font-bold tracking-widest text-xs py-6 rounded-none transition-all duration-300"
+                  >
+                    Visit Account
+                  </Button>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
