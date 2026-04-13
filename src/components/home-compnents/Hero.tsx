@@ -83,7 +83,7 @@ export default function Hero() {
 
               <div className="flex items-center gap-6 pt-4">
                 <Link href={"/apply"}>
-                  <Button className="bg-accent hover:bg-orange/90 text-foreground text-lg font-bold py-6 px-8 rounded flex items-center gap-2 group hover:scale-105 active:scale-95 cursor-pointer transition-all duration-300">
+                  <Button className="bg-orange cursor-pointer hover:bg-white hover:text-accent-foreground text-foreground font-black py-6 px-14 rounded-none uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
                     Join us
                     <div className="bg-white/20 p-1 rounded-full rotate-45 group-hover:rotate-90 transition-transform">
                       <ArrowUp className="h-4 w-4" />

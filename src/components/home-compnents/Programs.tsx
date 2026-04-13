@@ -4,6 +4,7 @@ import { Button } from "../ui/button"
 import { ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 
 const programs = [
   {
@@ -16,8 +17,7 @@ const programs = [
     title: "Fat Loss Coaching",
     benefit:
       "Shed stubborn fat while maintaining lean muscle mass with precision nutrition.",
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=800",
+    image: "/images/programs/fatloss.jpg",
   },
   {
     title: "Muscle Gain Program",
@@ -69,7 +69,9 @@ export default function Programs() {
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-110">
-                  <img
+                  <Image
+                    width={200}
+                    height={350}
                     src={program.image}
                     alt={program.title}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Trophy, Users, Flame, Award, CheckCircle2 } from "lucide-react"
 import { BsFacebook, BsInstagram, BsTiktok } from "react-icons/bs"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function AboutPage() {
   return (
@@ -27,7 +28,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8 }}
             className="max-w-3xl space-y-6"
           >
-            <h1 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
               Meet <span className="text-orange">Alex Saqib</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
@@ -189,7 +190,7 @@ export default function AboutPage() {
                   />
                   <img
                     src="images/about-page/phil-2.jpg"
-                    className="w-full aspect-[3/4] object-cover grayscale"
+                    className="w-full aspect-3/4 object-cover grayscale"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -362,13 +363,15 @@ export default function AboutPage() {
       {/* 5. Final Call-To-Action */}
       <section className="relative py-32 overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=2070"
+          <Image
+            width={600}
+            height={400}
+            src="/images/last-cta-bg.jpg"
             alt="Final CTA Background"
             className="w-full h-full object-cover opacity-30"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black via-black/50 to-black" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/10 to-black/60" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
@@ -390,9 +393,11 @@ export default function AboutPage() {
             </div>
 
             <div className="flex justify-center pt-6">
-              <Button className="bg-orange hover:bg-white text-black font-black py-8 px-16 rounded-none uppercase tracking-[0.2em] text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(242,125,38,0.4)]">
-                Apply Now
-              </Button>
+              <Link href={"/apply"}>
+                <Button className="bg-orange hover:bg-white text-black font-black py-8 px-16 rounded-none uppercase tracking-[0.2em] text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(242,125,38,0.4)]">
+                  Apply Now
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
