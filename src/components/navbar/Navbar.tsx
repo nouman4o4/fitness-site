@@ -5,7 +5,12 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -97,7 +102,7 @@ export default function Navbar() {
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="bg-background border-border p-0 w-full sm:w-[350px]"
+                  className="bg-background border-border p-0 w-full sm:w-87.5"
                 >
                   <div className="flex flex-col h-full">
                     <div className="p-6 border-b border-border flex items-center justify-between">
@@ -109,33 +114,37 @@ export default function Navbar() {
                       <ul className="space-y-6">
                         {navLinks.map((link) => (
                           <li key={link.href}>
-                            <Link
-                              href={link.href}
-                              className={cn(
-                                "text-2xl font-bold uppercase tracking-widest flex items-center justify-between group",
-                                pathname === link.href
-                                  ? "text-orange"
-                                  : "text-foreground",
-                              )}
-                            >
-                              {link.name}
-                              <ChevronRight
+                            <SheetClose asChild>
+                              <Link
+                                href={link.href}
                                 className={cn(
-                                  "h-5 w-5 transition-transform group-hover:translate-x-1",
+                                  " font-bold uppercase flex items-center justify-between group",
                                   pathname === link.href
                                     ? "text-orange"
-                                    : "text-muted-foreground",
+                                    : "text-foreground",
                                 )}
-                              />
-                            </Link>
+                              >
+                                {link.name}
+                                <ChevronRight
+                                  className={cn(
+                                    "h-5 w-5 transition-transform group-hover:translate-x-1",
+                                    pathname === link.href
+                                      ? "text-orange"
+                                      : "text-muted-foreground",
+                                  )}
+                                />
+                              </Link>
+                            </SheetClose>
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="p-6 border-t border-border">
-                      <Button className="w-full hover:bg-orange/90 text-black font-bold uppercase py-8 text-lg rounded-none">
-                        Book a session
-                      </Button>
+                      <Link href={"/apply"}>
+                        <Button className="w-full hover:bg-orange/90 text-black font-bold uppercase py-8 text-lg rounded-none">
+                          Book a session
+                        </Button>
+                      </Link>
                     </div>
                   </div>
                 </SheetContent>
