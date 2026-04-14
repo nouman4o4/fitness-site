@@ -2,6 +2,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from "lucide-react"
+import Link from "next/link"
 export default function ProgramCards() {
   const programs = [
     {
@@ -114,9 +115,11 @@ export default function ProgramCards() {
                       / Month
                     </span>
                   </div>
-                  <Button className="bg-orange hover:bg-white text-black font-black py-8 px-6 rounded uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.2)]">
-                    Select Program
-                  </Button>
+                  <Link href={`/apply?program=${program.title}`}>
+                    <Button className="bg-orange hover:bg-white text-black font-black py-8 px-6 rounded uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.2)]">
+                      Select Program
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
