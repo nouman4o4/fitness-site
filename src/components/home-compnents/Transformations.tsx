@@ -6,9 +6,9 @@ import { motion } from "framer-motion"
 export default function Transformations() {
   return (
     <div>
-      <section className="py-24 bg-background">
+      <section className="py-8 md:py-24 bg-background">
         <div className="w-full px-4 md:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-16 gap-6">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
                 Real <span className="text-orange">Results</span>
@@ -17,12 +17,6 @@ export default function Transformations() {
                 Witness the power of elite coaching
               </p>
             </div>
-            <Button
-              variant="outline"
-              className="border-orange/50 text-orange hover:bg-orange hover:text-black rounded-none uppercase font-bold tracking-widest"
-            >
-              View All Results
-            </Button>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -116,7 +110,7 @@ export default function Transformations() {
           </div>
 
           {/* Bottom Stats Summary */}
-          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 bg-card py-12 border border-white/10">
+          <div className="mt-8 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 bg-card py-12 border border-white/10">
             <div className="text-center space-y-2">
               <p className="text-4xl font-black text-orange">2500kg+</p>
               <p className="text-[10px] uppercase tracking-widest font-bold text-muted-foreground">

@@ -7,7 +7,7 @@ import Link from "next/link"
 export default function FinalCta() {
   return (
     <div>
-      <section className="relative py-32 overflow-hidden bg-black">
+      <section className="relative py-20 overflow-hidden bg-background">
         {/* Background Image with heavy overlay */}
         <div className="absolute inset-0 z-0">
           <img

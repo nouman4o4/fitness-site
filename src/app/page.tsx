@@ -10,7 +10,7 @@ import FinalCta from "@/components/home-compnents/FinalCta"
 
 export default function Home() {
   return (
-    <div className="bg-card min-h-[200vh]">
+    <div className="bg-card w-full overflow-x-hidden">
       <Hero />
       <StatsStrip />
       <AboutPreview />

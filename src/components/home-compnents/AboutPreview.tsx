@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
 export default function AboutPreview() {
   return (
-    <section className="relative z-10 py-14 md:py-24 bg-background">
+    <section className="relative z-10 py-8 md:py-24 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-6 grid md:grid-cols-[0.7fr_1.3fr] gap-10 items-center">
         {/* Portrait */}
 
@@ -15,7 +15,7 @@ export default function AboutPreview() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 1 * 0.1, duration: 0.5 }}
-          className="relative overflow-hidden"
+          className="relative overflow-hidden order-2 md:order-1"
         >
           <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent" />
 
@@ -29,23 +29,22 @@ export default function AboutPreview() {
           />
         </motion.div>
 
-        {/* Copy */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 2 * 0.1, duration: 0.5 }}
-          className="space-y-6 grow"
+          className="space-y-6 grow order-1 md:order-2"
         >
-          <h3 className="text-3xl font-medium text-accent uppercase">
-            About me
-          </h3>
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
+            About <span className="text-accent">Me</span>
+          </h2>
 
           <div className="space-y-3">
             <h2 className="text-4xl md:text-4xl font-black leading-tight">
               Built Through Discipline. Proven Through Results.{" "}
             </h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               I’m an<span className="text-foreground"> ISSA Certified </span>
               Fitness Expert with{" "}
               <span className="text-foreground">8 years</span> of natural

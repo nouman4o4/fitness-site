@@ -46,7 +46,7 @@ export default function Hero() {
 
   return (
     <div>
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
+      <section className="relative md:min-h-screen flex items-center pt-20 overflow-hidden bg-black">
         {/* Background Image with Overlay */}
         <div className="absolute top-0 bottom-0 right-0 w-1/2 z-0">
           <img
@@ -59,7 +59,7 @@ export default function Hero() {
           <div className="absolute inset-0 bg-linear-to-r from-black via-black/40 to-transparent" />
         </div>
 
-        <div className="w-full px-4 md:px-6 relative z-30">
+        <div className="w-full px-4 py-4 md:py-0 md:px-6 relative z-30">
           <div className="lg:w-5/6">
             <motion.div
               initial={{ opacity: 0 }}

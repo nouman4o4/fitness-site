@@ -3,9 +3,13 @@ import { AnimatePresence, motion } from "framer-motion"
 import { Button } from "../ui/button"
 import { Minus, Plus } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 export default function FAQs() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
+  const message = "Hi, I'm interested in your coaching programs."
+  const phoneNumber = "1234567890"
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
 
   const faqs = [
     {
@@ -41,7 +45,7 @@ export default function FAQs() {
   ]
   return (
     <div>
-      <section className="py-24 bg-black">
+      <section className="py-8 md:py-24 bg-black">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
@@ -52,7 +56,7 @@ export default function FAQs() {
                 Everything you need to know about our coaching process and how
                 we help you achieve elite results.
               </p>
-              <div className="pt-8">
+              <div className="pt-6">
                 <div className="p-8 bg-surface border border-border space-y-4">
                   <h3 className="text-xl font-bold uppercase tracking-tight">
                     Still have questions?
@@ -61,9 +65,16 @@ export default function FAQs() {
                     Can't find the answer you're looking for? Reach out to Alex
                     directly for a personal consultation.
                   </p>
-                  <Button className="bg-orange hover:bg-white text-black font-bold uppercase tracking-widest rounded-none w-full py-6">
-                    Contact Me
-                  </Button>
+                  <Link
+                    href={whatsappUrl}
+                    rel="noopener noreferrer"
+                    aria-label="Chat on WhatsApp"
+                    target="_blank"
+                  >
+                    <Button className="bg-orange hover:bg-white text-black font-bold uppercase tracking-widest rounded-none w-full py-6">
+                      Contact Me
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ export default function ProgramCards() {
       benefits: ["Daily Access", "Form Video Reviews", "Priority Support"],
       price: "40,000",
       popular: false,
-      image: "/images/1-on-1.jfif",
+      image: "/images/1-on-1.jpg",
     },
     {
       title: "Fat Loss Coaching",

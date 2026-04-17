@@ -9,6 +9,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
@@ -37,7 +38,7 @@ export default function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 bg-background transition-all duration-300 border-b",
         isScrolled
-          ? "bg-background/80 backdrop-blur-xs border-border py-3"
+          ? "bg-background/80 backdrop-blur-xs border-border py-6"
           : "bg-transparent border-transparent py-6",
       )}
     >
@@ -103,13 +104,22 @@ export default function Navbar() {
                 </SheetTrigger>
                 <SheetContent
                   side="right"
-                  className="bg-background border-border p-0 w-full sm:w-87.5"
+                  className="bg-background border-border p-0 w-full sm:w-87.5 transition ease-in-out duration-300
+    data-[state=open]:animate-in
+    data-[state=closed]:animate-out
+    data-[state=open]:slide-in-from-right
+    data-[state=closed]:slide-out-to-right"
                 >
                   <div className="flex flex-col h-full">
                     <div className="p-6 border-b border-border flex items-center justify-between">
-                      <span className="text-xl font-black uppercase tracking-tighter">
-                        Alex <span className="text-primary">Saqib</span>
-                      </span>
+                      <SheetTitle>
+                        <span className="text-xl font-black uppercase tracking-tighter">
+                          Alex <span className="text-primary">Saqib</span>
+                        </span>
+                      </SheetTitle>
+                      <SheetClose>
+                        <X className="text-white size-6" />
+                      </SheetClose>
                     </div>
                     <div className="flex-1 overflow-y-auto py-8 px-6">
                       <ul className="space-y-6">

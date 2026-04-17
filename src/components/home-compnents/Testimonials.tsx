@@ -5,9 +5,9 @@ import React from "react"
 export default function Testimonials() {
   return (
     <div>
-      <section className="py-24 bg-background overflow-hidden">
+      <section className="py-8 md:py-24 bg-background overflow-hidden">
         <div className="w-full px-4 md:px-6">
-          <div className="max-w-3xl mb-20 space-y-4">
+          <div className="max-w-3xl mb-8 md:mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Client <span className="text-orange">Voices</span>
             </h2>

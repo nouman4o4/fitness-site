@@ -70,9 +70,9 @@ export default function Plans() {
   ]
   return (
     <div>
-      <section className="py-24 bg-secondary-bg">
+      <section className="py-8 md:py-24 bg-secondary-bg">
         <div className="mx-auto px-4 md:px-6">
-          <div className="mb-20 space-y-4">
+          <div className="mb-8 md:mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Coaching <span className="text-orange">Plans</span>
             </h2>

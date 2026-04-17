@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+
 import { Button } from "../ui/button"
 import { ChevronRight } from "lucide-react"
 import { motion } from "framer-motion"
@@ -11,7 +11,7 @@ const programs = [
     title: "One on One Coaching",
     benefit:
       "The ultimate personalized experience with 24/7 support for maximum results.",
-    image: "/images/1-on-1.jfif",
+    image: "/images/1-on-1.jpg",
   },
   {
     title: "Fat Loss Coaching",
@@ -38,7 +38,7 @@ const programs = [
 export default function Programs() {
   return (
     <div>
-      <section className="py-24 bg-card">
+      <section className="py-8 md:py-24 bg-card">
         <div className="w-full px-4 md:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
@@ -49,12 +49,14 @@ export default function Programs() {
                 Choose your path to physical excellence
               </p>
             </div>
-            <Button
-              variant="outline"
-              className="border-accent/50 text-orange hover:bg-orange hover:text-black rounded uppercase cursor-pointer font-bold tracking-widest"
-            >
-              View All Services
-            </Button>
+            <Link href={"/programs"} className="w-full">
+              <Button
+                variant="outline"
+                className="border-accent/50 w-full text-orange hover:bg-orange hover:text-black rounded uppercase cursor-pointer font-bold tracking-widest"
+              >
+                View All Services
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
