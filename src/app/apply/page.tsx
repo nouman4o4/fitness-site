@@ -1,10 +1,11 @@
 "use client"
-import { useState } from "react"
+import { Suspense, useState } from "react"
 import { motion } from "framer-motion"
 
 import SubmitModal from "./components/SubmitModal"
 import Image from "next/image"
 import FormSection from "./components/FormSection"
+import FormSectionSkeleton from "./components/FormSectionSkeleton"
 
 export default function ApplyPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -48,7 +49,10 @@ export default function ApplyPage() {
       </section>
 
       {/* 2. Application Form Section */}
-      <FormSection setIsSubmitted={setIsSubmitted} />
+
+      <Suspense fallback={<FormSectionSkeleton />}>
+        <FormSection setIsSubmitted={setIsSubmitted} />
+      </Suspense>
     </main>
   )
 }
