@@ -4,6 +4,7 @@ import "./globals.css"
 import { cn } from "@/lib/utils"
 import Navbar from "@/components/navbar/Navbar"
 import Footer from "@/components/footer/Footer"
+import WhatsAppButton from "@/components/WhatsAppButton"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className="min-h-full max-w-350 mx-auto flex flex-col">
         <Navbar />
         {children}
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

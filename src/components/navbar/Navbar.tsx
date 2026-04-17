@@ -79,12 +79,14 @@ export default function Navbar() {
           {/* Right: CTA & Mobile Menu */}
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center">
-              <Button
-                className="border-accent cursor-pointer bg-background text-foreground rounded
+              <Link href={"/apply"}>
+                <Button
+                  className="border-accent cursor-pointer bg-background text-foreground rounded
                hover:bg-accent font-bold uppercase tracking-wider px-8 transition-transform hover:scale-105 active:scale-95"
-              >
-                Book a session
-              </Button>
+                >
+                  Book a session
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Trigger */}
