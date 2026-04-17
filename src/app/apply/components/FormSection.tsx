@@ -122,7 +122,7 @@ export default function FormSection({
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Left Side: Info & Trust */}
-          <div className="lg:col-span-1 space-y-12">
+          <div className="lg:col-span-1 order-2 md:order-1 space-y-12">
             <div className="space-y-6">
               <h2 className="text-3xl font-black uppercase tracking-tight italic text-text-main">
                 Why <span className="text-orange">Apply?</span>
@@ -191,7 +191,7 @@ export default function FormSection({
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-surface-2 border border-border p-8 md:p-12 shadow-2xl"
+              className="bg-surface-2 border border-border p-8 px-4 md:p-12 shadow-2xl"
             >
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Group 1: Personal Info */}
