@@ -5,50 +5,25 @@ import { Trophy, Users, Flame, Award, CheckCircle2 } from "lucide-react"
 import { BsFacebook, BsInstagram, BsTiktok } from "react-icons/bs"
 import Link from "next/link"
 import Image from "next/image"
+import CommonHero from "@/components/CommonHero"
 
 export default function AboutPage() {
   return (
-    <main className="flex-1 pt-24">
+    <main className="flex-1 pt-20">
       {/* 1. Hero / Introduction Section */}
-      <section className="relative h-[70vh] flex items-center overflow-hidden bg-black">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/images/about-page/hero-background.jpg"
-            alt="Coach Alex Saqib"
-            className="w-full h-full object-cover opacity-60"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-black" />
-        </div>
-
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl space-y-6"
-          >
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
-              Meet <span className="text-orange">Alex Saqib</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
-              Elite Fitness Coach & Transformation Specialist. Dedicated to
+      <CommonHero
+        titleOne="Meet"
+        titleTwo="Alex Saqib"
+        description="Elite Fitness Coach & Transformation Specialist. Dedicated to
               helping you break through plateaus and achieve the physique you've
-              always dreamed of.
-            </p>
-            <div className="pt-4">
-              <Link href={"/apply"}>
-                <Button className="bg-orange cursor-pointer hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
-                  Apply for Coaching
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+              always dreamed of."
+        imageSrc="/images/about-page/hero-background.jpg"
+        link="/apply"
+        buttonTitle="Apply for Coaching"
+      />
 
       {/* 2. Story / Mission Section */}
-      <section className="py-24 bg-background">
+      <section className="py-8 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -113,9 +88,9 @@ export default function AboutPage() {
       </section>
 
       {/* 3. Credentials / Experience Section */}
-      <section className="py-24 bg-card">
+      <section className="py-8 md:py-24 bg-card">
         <div className=" px-4 md:px-6">
-          <div className="max-w-3xl  mb-20 space-y-4">
+          <div className="max-w-3xl mb-10 md:mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Elite <span className="text-orange">Credentials</span>
             </h2>
@@ -171,7 +146,7 @@ export default function AboutPage() {
       </section>
 
       {/* 4. Philosophy / Training Approach */}
-      <section className="py-24 bg-black">
+      <section className="py-8 md:py-24 bg-black">
         <div className="px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -265,9 +240,9 @@ export default function AboutPage() {
       </section>
 
       {/* socail impact */}
-      <section className="py-24 bg-secondary-bg">
+      <section className="py-8 md:py-24 bg-secondary-bg">
         <div className="px-4 md:px-6">
-          <div className="mb-20 space-y-4">
+          <div className="mb-10 md:mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Social <span className="text-orange">Impact</span>
             </h2>
@@ -361,7 +336,7 @@ export default function AboutPage() {
       </section>
 
       {/* 5. Final Call-To-Action */}
-      <section className="relative py-32 overflow-hidden bg-background">
+      <section className="relative py-20 md:py-32 overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
           <Image
             width={600}
@@ -383,7 +358,7 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto space-y-10"
           >
             <div className="space-y-4">
-              <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-none">
                 Ready to <span className="text-orange">Level Up?</span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-2xl mx-auto leading-relaxed">

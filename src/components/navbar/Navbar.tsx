@@ -9,6 +9,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
@@ -110,6 +111,7 @@ export default function Navbar() {
     data-[state=open]:slide-in-from-right
     data-[state=closed]:slide-out-to-right"
                 >
+                  <SheetDescription className="hidden">Menu</SheetDescription>
                   <div className="flex flex-col h-full">
                     <div className="p-6 border-b border-border flex items-center justify-between">
                       <SheetTitle>

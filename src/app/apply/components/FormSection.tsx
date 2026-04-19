@@ -20,7 +20,6 @@ import {
   Star,
   Loader2,
 } from "lucide-react"
-import Image from "next/image"
 import { useSearchParams } from "next/navigation"
 
 interface FormData {
@@ -118,7 +117,7 @@ export default function FormSection({
   }, [preSelctedProgram])
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-8 md:py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Left Side: Info & Trust */}

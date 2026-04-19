@@ -41,7 +41,7 @@ export default function FinalCta() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-6">
               <Link href={"/apply"} className="cursor-pointer">
                 {" "}
-                <Button className="bg-orange cursor-pointer hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-[0.2em] text-lg w-full sm:w-auto transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
+                <Button className="bg-orange cursor-pointer hover:bg-white text-black font-black py-8 px-6 md:px-12 rounded-none uppercase tracking-[0.2em] text-lg w-full sm:w-auto transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
                   Apply for Coaching Now
                 </Button>
               </Link>

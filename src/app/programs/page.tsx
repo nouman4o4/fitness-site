@@ -2,7 +2,6 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import {
-  CheckCircle2,
   Dumbbell,
   Target,
   Users,
@@ -15,7 +14,7 @@ import {
 } from "lucide-react"
 import ProgramCards from "./components/ProgramCards"
 import Link from "next/link"
-import Image from "next/image"
+import CommonHero from "@/components/CommonHero"
 
 export default function ProgramsPage() {
   const steps = [
@@ -67,49 +66,21 @@ export default function ProgramsPage() {
   return (
     <main className="flex-1 pt-20">
       {/* 1. Intro Hero Section */}
-      <section className="relative h-[60vh] flex items-center overflow-hidden bg-black">
-        <div className="absolute inset-0 z-0">
-          <Image
-            width={600}
-            height={400}
-            src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=2070"
-            alt="Training Background"
-            className="w-full h-full object-cover opacity-50"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-black via-black/60 to-transparent" />
-        </div>
-
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl space-y-6"
-          >
-            <h1 className="text-3xl md:text-5xl font-black uppercase tracking-tighter leading-none">
-              Elite <span className="text-orange">Programs</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 font-medium leading-relaxed max-w-2xl">
-              Precision-engineered coaching protocols designed for those who
-              demand nothing less than physical excellence.
-            </p>
-            <div className="pt-4">
-              <Link href={"#programs"}>
-                <Button className="bg-orange hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
-                  Choose Your Program
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CommonHero
+        titleOne="Elite"
+        titleTwo="Programs"
+        description="Precision-engineered coaching protocols designed for those who
+              demand nothing less than physical excellence."
+        imageSrc="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=2070"
+        link="#programs"
+        buttonTitle="Choose Your Program"
+      />
 
       {/* 2. Program Cards Section */}
       <ProgramCards />
 
       {/* 3. Who This Is For Section */}
-      <section className="py-24 bg-surface">
+      <section className="py-10 md:py-24 bg-surface">
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -160,7 +131,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* 4. Process / How It Works Section */}
-      <section className="py-24 bg-black">
+      <section className="py-10 md:py-24 bg-black">
         <div className="container mx-auto px-4 md:px-6">
           <div className="mb-20 space-y-4">
             <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter">
@@ -205,7 +176,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* 5. Final CTA Section */}
-      <section className="relative py-32 overflow-hidden bg-black">
+      <section className="relative py-20 md:py-32 overflow-hidden bg-black">
         <div className="absolute inset-0 z-0">
           <img
             src="/images/last-cta-bg.jpg"
@@ -234,9 +205,9 @@ export default function ProgramsPage() {
               </p>
             </div>
 
-            <div className="flex justify-center pt-6">
+            <div className="text-center pt-6">
               <Link href={"/apply"}>
-                <Button className="bg-orange hover:bg-white text-black font-black py-8 px-16 rounded-none uppercase tracking-[0.2em] text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(242,125,38,0.4)]">
+                <Button className="bg-orange hover:bg-white text-black font-black py-8 px-12 rounded-none uppercase tracking-wider text-xl transition-all duration-300 hover:scale-105 shadow-[0_0_40px_rgba(242,125,38,0.4)]">
                   Apply for Coaching <ArrowRight className="ml-4 h-6 w-6" />
                 </Button>
               </Link>

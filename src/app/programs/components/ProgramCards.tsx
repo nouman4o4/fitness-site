@@ -46,9 +46,9 @@ export default function ProgramCards() {
   ]
 
   return (
-    <section id="programs" className="py-24 bg-black">
+    <section id="programs" className="py-8 md:py-24 bg-black">
       <div className="px-4 md:px-6">
-        <div className="mb-20 space-y-4">
+        <div className="mb-10 md:mb-20 space-y-4">
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tighter ">
             Our <span className="text-orange">Coaching</span>
           </h2>
@@ -57,7 +57,7 @@ export default function ProgramCards() {
           </p>
         </div>
 
-        <div className="space-y-20">
+        <div className="space-y-10 md:space-y-20">
           {programs.map((program, i) => (
             <motion.div
               key={i}
@@ -65,7 +65,7 @@ export default function ProgramCards() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center bg-card border border-white/5 p-8 lg:p-12 relative overflow-hidden group hover:border-orange/20 transition-all duration-500`}
+              className={`flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-12 items-center bg-card border border-white/5 p-4 md:p-8 lg:p-12 relative overflow-hidden group hover:border-orange/20 transition-all duration-500`}
             >
               {program.popular && (
                 <div className="absolute top-6 right-6 bg-orange text-black font-black uppercase text-[10px] tracking-[0.2em] px-4 py-1.5 rounded-full z-20">
@@ -78,7 +78,7 @@ export default function ProgramCards() {
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
+                  className="w-full md:h-full object-top md:object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent" />
