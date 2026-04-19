@@ -49,7 +49,7 @@ export default function CommonHero({
               {description}
             </p>
             {link ? (
-              <div className="pt-4 text-center">
+              <div className="pt-4 text-center md:text-left">
                 <Link href={link}>
                   <Button className="bg-orange cursor-pointer hover:bg-white text-black font-black py-6 px-6 md:py-8 md:px-12 rounded-none uppercase tracking-[0.2em] text-lg transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
                     {buttonTitle}
