@@ -13,7 +13,7 @@ export default function AboutPage() {
       {/* 1. Hero / Introduction Section */}
       <CommonHero
         titleOne="Meet"
-        titleTwo="Alex Saqib"
+        titleTwo="Sayem salam"
         description="Elite Fitness Coach & Transformation Specialist. Dedicated to
               helping you break through plateaus and achieve the physique you've
               always dreamed of."
@@ -69,8 +69,8 @@ export default function AboutPage() {
               className="relative aspect-square"
             >
               <img
-                src="/images/about-page/saqib.jpg"
-                alt="Alex Training"
+                src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=1200&q=80"
+                alt="Sayem salam training in the gym"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 border border-white/10"
                 referrerPolicy="no-referrer"
               />
@@ -255,28 +255,31 @@ export default function AboutPage() {
             {[
               {
                 platform: "Instagram",
-                handle: "@alex_saqib",
-                followers: "44k+",
-                accountLink: "https://www.instagram.com/alex_saqib",
-                image: "/images/about-page/insta-dp.jpg",
+                handle: "@sayem_salam.fit",
+                followers: "61.2K+",
+                accountLink: "https://www.instagram.com/sayem_salam.fit",
+                image:
+                  "https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=500&q=80",
                 icon: BsInstagram,
                 color: "text-[#E1306C]",
               },
               {
                 platform: "TikTok",
-                handle: "@saqib_alex",
-                followers: "245K+",
-                accountLink: "https://www.tiktok.com/@saqib_alex",
-                image: "/images/about-page/tiktok-dp.jpeg",
+                handle: "@sayem.salam.coach",
+                followers: "178K+",
+                accountLink: "https://www.tiktok.com/@sayem.salam.coach",
+                image:
+                  "https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=500&q=80",
                 icon: BsTiktok,
                 color: "text-white",
               },
               {
                 platform: "Facebook",
-                handle: "Alex Saqib fintness",
-                followers: "44k+",
-                image: "images/about-page/tiktok-dp.jpeg",
-                accountLink: "https://web.facebook.com/alexsaqibathletic",
+                handle: "Sayem Salam Fitness",
+                followers: "39.8K+",
+                image:
+                  "https://images.unsplash.com/photo-1566753323558-f4e0952af115?auto=format&fit=crop&w=500&q=80",
+                accountLink: "https://web.facebook.com/sayemsalamfitness",
                 icon: BsFacebook,
                 color: "text-[#1877F2]",
               },

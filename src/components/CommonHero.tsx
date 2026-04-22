@@ -28,7 +28,7 @@ export default function CommonHero({
             height={400}
             width={800}
             src={imageSrc}
-            alt="Coach Alex Saqib"
+            alt="Coach Sayem salam"
             className="w-full h-full object-cover opacity-60"
             referrerPolicy="no-referrer"
           />

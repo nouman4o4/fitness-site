@@ -48,7 +48,7 @@ export default function Navbar() {
           {/* Left: Logo */}
           <Link href="/" className="flex flex-col items-start group">
             <span className="text-2xl font-black uppercase tracking-tighter leading-none group-hover:text-orange transition-colors">
-              Alex <span className="text-accent">Saqib</span>
+              Sayem <span className="text-accent">Salam</span>
             </span>
             <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-muted-foreground leading-none mt-1">
               Elite Fitness

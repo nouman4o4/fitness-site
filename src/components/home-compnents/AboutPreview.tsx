@@ -20,8 +20,8 @@ export default function AboutPreview() {
           <div className="absolute inset-0 bg-linear-to-tr from-black/70 via-black/40 to-transparent" />
 
           <Image
-            src="/images/image-1.jpg"
-            alt="Coach portrait"
+            src="https://images.unsplash.com/photo-1594737625785-a6cbdabd333c?auto=format&fit=crop&w=900&q=80"
+            alt="Sayem salam training in the gym"
             width={600}
             height={800}
             className="w-full object-cover"
