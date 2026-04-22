@@ -21,28 +21,7 @@ export default function Hero() {
       icon: FaFacebook,
     },
   ]
-
-  const floatingAnimation = {
-    initial: { x: 20, y: 20, opacity: 0 },
-    enter: {
-      x: 0,
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: easeOut,
-        repeat: 0,
-      },
-    },
-    float: {
-      y: [0, -8, 0],
-      transition: {
-        duration: 3,
-        ease: easeInOut,
-        repeat: Infinity,
-      },
-    },
-  }
+  const smooth = [0.22, 1, 0.36, 1] // premium easing
 
   return (
     <div>
@@ -50,7 +29,6 @@ export default function Hero() {
         {/* Background Image with Overlay */}
         <div className="absolute top-0 bottom-0 right-0 w-1/2 z-0">
           <img
-            // src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=2070"
             src={"/images/hero.jfif"}
             alt="Gym Background"
             className="w-full h-full object-cover opacity-60"
@@ -62,26 +40,63 @@ export default function Hero() {
         <div className="w-full px-4 py-4 md:py-0 md:px-6 relative z-30">
           <div className="lg:w-5/6">
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial="hidden"
+              whileInView="show"
               viewport={{ once: true }}
-              transition={{ delay: 0 * 0.1, duration: 0.5 }}
+              variants={{
+                hidden: {},
+                show: {
+                  transition: {
+                    staggerChildren: 0.15,
+                  },
+                },
+              }}
               className="space-y-8 z-20 relative"
             >
-              <h1 className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-tight">
+              <motion.h1
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.6, ease: "easeIn" },
+                  },
+                }}
+                className="text-4xl md:text-6xl font-black uppercase tracking-tight leading-tight"
+              >
                 Sculpted With Purpose. <br />
                 <span className="text-accent md:text-5xl">
                   Backed By Discipline!
                 </span>
-              </h1>
+              </motion.h1>
 
-              <p className="text-lg text-gray-300 max-w-lg leading-relaxed">
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, ease: "easeIn" },
+                  },
+                }}
+                className="text-lg text-gray-300 max-w-lg leading-relaxed"
+              >
                 Transform your body and mind with our cutting-edge equipment and
                 dedicated trainers. Join us today and start your journey to a
                 healthier, stronger you.
-              </p>
+              </motion.p>
 
-              <div className="flex items-center gap-6 pt-4">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, ease: "easeIn" },
+                  },
+                }}
+                className="flex items-center gap-6 pt-4"
+              >
                 <Link href={"/apply"}>
                   <Button className="bg-orange cursor-pointer hover:bg-white hover:text-accent-foreground text-foreground font-black py-6 px-14 rounded-none uppercase tracking-[0.2em] transition-all duration-300 hover:scale-105 shadow-[0_0_30px_rgba(242,125,38,0.3)]">
                     Join us
@@ -90,10 +105,20 @@ export default function Hero() {
                     </div>
                   </Button>
                 </Link>
-              </div>
+              </motion.div>
 
               {/* Social Proof */}
-              <div className="pt-12 space-y-4">
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { duration: 0.5, ease: "easeIn" },
+                  },
+                }}
+                className="pt-12 space-y-4"
+              >
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map((i) => (
                     <img
@@ -111,7 +136,7 @@ export default function Hero() {
                     Transformations
                   </p>
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
 
             {/* Right Side - Floating Cards & Socials */}
