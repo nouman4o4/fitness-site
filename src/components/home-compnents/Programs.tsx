@@ -49,7 +49,7 @@ export default function Programs() {
                 Choose your path to physical excellence
               </p>
             </div>
-            <Link href={"/programs"} className="w-full">
+            <Link href={"/programs"} className="w-full md:w-fit">
               <Button
                 variant="outline"
                 className="border-accent/50 w-full text-orange hover:bg-orange hover:text-black rounded uppercase cursor-pointer font-bold tracking-widest"
